@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://SIZIN-DOMAININIZ.com/sitemap.xml
+Sitemap: https://opperator04.github.io/panel-atolye/sitemap.xml
