@@ -6,7 +6,8 @@ const SITE_CONFIG = {
   whatsappNumber: "905XXXXXXXXX",
   // Formspree veya Web3Forms gibi bir form servisi kullanırsanız URL'yi buraya yazın.
   // Boş bırakılırsa talep WhatsApp / Kopyala üzerinden iletilir.
-  formEndpoint: "https://formsubmit.co/ajax/kutluahmet1907@gmail.com"
+  formEndpoint: "https://api.web3forms.com/submit",
+  web3formsKey: "dcaeee76-a0fb-4b60-88ae-cead4df8949c"
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -94,7 +95,9 @@ document.addEventListener("DOMContentLoaded", () => {
               Accept: "application/json"
             },
             body: JSON.stringify({
-              _subject: `Yeni Panel Talebi: ${businessName}`,
+              access_key: SITE_CONFIG.web3formsKey,
+              subject: `Yeni Panel Talebi: ${businessName}`,
+              from_name: "PanelAtölye Talep Formu",
               fullName,
               businessName,
               phone,
