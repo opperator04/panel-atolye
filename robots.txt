@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://SIZIN-DOMAININIZ.com/sitemap.xml
