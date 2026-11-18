@@ -70,12 +70,13 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-  background: var(--primary);
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
   color: #fff;
-  font-size: 0.95rem;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
 }
 
 .brand-text strong {
@@ -212,11 +213,27 @@ body {
 
 /* Hero */
 .hero {
-  padding: 64px 0 80px;
-  background: radial-gradient(circle at top right, #eff6ff 0%, #ffffff 55%);
+  position: relative;
+  overflow: hidden;
+  padding: 72px 0 88px;
+  background:
+    radial-gradient(circle at 85% 15%, rgba(99, 102, 241, 0.10) 0%, transparent 45%),
+    radial-gradient(circle at 15% 80%, rgba(37, 99, 235, 0.08) 0%, transparent 45%),
+    linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+}
+
+.code-bg-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .hero-grid {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
   gap: 44px;
@@ -308,6 +325,12 @@ body {
 .mockup-status {
   color: var(--success);
   font-weight: 700;
+  animation: pulseStatus 2.2s ease-in-out infinite;
+}
+
+@keyframes pulseStatus {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
 }
 
 .mockup-body {
@@ -465,8 +488,9 @@ body {
 }
 
 .card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow);
+  transform: translateY(-4px);
+  border-color: rgba(37, 99, 235, 0.35);
+  box-shadow: 0 18px 36px -14px rgba(37, 99, 235, 0.18);
 }
 
 .card-icon {

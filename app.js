@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
             body: JSON.stringify({
               access_key: SITE_CONFIG.web3formsKey,
               subject: `Yeni Panel Talebi: ${businessName}`,
-              from_name: "PanelAtölye Talep Formu",
+              from_name: "ViraPano Talep Formu",
               fullName,
               businessName,
               phone,
@@ -146,4 +146,66 @@ document.addEventListener("DOMContentLoaded", () => {
       form.hidden = false;
     });
   }
+
+  initCodeBackground();
 });
+
+// Gözü yormayan, hafif akan kod arka planı
+function initCodeBackground() {
+  const canvas = document.getElementById("codeBgCanvas");
+  if (!canvas) return;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  const ctx = canvas.getContext("2d");
+  const snippets = [
+    "const ciro = +18%;",
+    "stok.kontrol()",
+    "randevu => onay",
+    "{ panel: 'özel' }",
+    "kasa.ozet()",
+    "siparis[7]",
+    "01",
+    "=>",
+    "sync()",
+    "rapor.hazir"
+  ];
+
+  let width = 0;
+  let height = 0;
+  let drops = [];
+
+  function resize() {
+    const rect = canvas.parentElement.getBoundingClientRect();
+    width = canvas.width = rect.width;
+    height = canvas.height = rect.height;
+    const count = Math.max(12, Math.floor(width / 95));
+    drops = Array.from({ length: count }, (_, i) => ({
+      x: (i + 0.5) * (width / count) + (Math.random() * 24 - 12),
+      y: Math.random() * height,
+      speed: 0.25 + Math.random() * 0.35,
+      text: snippets[Math.floor(Math.random() * snippets.length)],
+      alpha: 0.06 + Math.random() * 0.06
+    }));
+  }
+
+  resize();
+  window.addEventListener("resize", resize);
+
+  function draw() {
+    ctx.clearRect(0, 0, width, height);
+    ctx.font = "500 12px ui-monospace, SFMono-Regular, Menlo, monospace";
+
+    for (const d of drops) {
+      ctx.fillStyle = `rgba(37, 99, 235, ${d.alpha})`;
+      ctx.fillText(d.text, d.x, d.y);
+      d.y += d.speed;
+      if (d.y > height + 20) {
+        d.y = -16;
+        d.text = snippets[Math.floor(Math.random() * snippets.length)];
+      }
+    }
+    requestAnimationFrame(draw);
+  }
+
+  requestAnimationFrame(draw);
+}
