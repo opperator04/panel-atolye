@@ -2,10 +2,6 @@
 // KİŞİSEL AYARLAR (Yayına almadan önce burayı güncelleyin)
 // ============================================================
 const SITE_CONFIG = {
-  // Başında + olmadan ülke koduyla WhatsApp numaranız (Örn: "905321234567")
-  whatsappNumber: "905XXXXXXXXX",
-  // Formspree veya Web3Forms gibi bir form servisi kullanırsanız URL'yi buraya yazın.
-  // Boş bırakılırsa talep WhatsApp / Kopyala üzerinden iletilir.
   formEndpoint: "https://api.web3forms.com/submit",
   web3formsKey: "dcaeee76-a0fb-4b60-88ae-cead4df8949c"
 };
@@ -16,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("panelRequestForm");
   const formSuccess = document.getElementById("formSuccess");
   const successMessage = document.getElementById("successMessage");
-  const whatsappSendBtn = document.getElementById("whatsappSendBtn");
   const copySummaryBtn = document.getElementById("copySummaryBtn");
   const resetFormBtn = document.getElementById("resetFormBtn");
   const detailsInput = document.getElementById("details");
@@ -112,23 +107,15 @@ document.addEventListener("DOMContentLoaded", () => {
             throw new Error("Form gönderilemedi.");
           }
           successMessage.textContent =
-            "Talebiniz e-posta adresime başarıyla iletildi. Dilerseniz WhatsApp'tan da hızlandırabilirsiniz.";
+            "Talebiniz başarıyla iletildi. En kısa sürede size dönüş yapılacaktır.";
         } catch (err) {
           successMessage.textContent =
-            "Talebiniz hazırlandı. Aşağıdaki butondan doğrudan WhatsApp ile iletebilirsiniz.";
+            "Talebiniz gönderilirken bir sorun oluştu. Lütfen daha sonra tekrar deneyin.";
         } finally {
           submitBtn.disabled = false;
           submitBtn.textContent = "Talebi Gönder";
         }
-      } else {
-        successMessage.textContent =
-          "Talebiniz hazırlandı! Aşağıdaki butona tıklayarak WhatsApp üzerinden bana tek tıkla gönderebilirsiniz.";
       }
-
-      // WhatsApp bağlantısını hazırla
-      const cleanNumber = SITE_CONFIG.whatsappNumber.replace(/\D/g, "");
-      const waUrl = `https://wa.me/${cleanNumber}?text=${encodeURIComponent(lastSummaryText)}`;
-      whatsappSendBtn.href = waUrl;
 
       form.hidden = true;
       formSuccess.hidden = false;
