@@ -184,7 +184,7 @@ function initCodeBackground() {
       y: Math.random() * height,
       speed: 0.25 + Math.random() * 0.35,
       text: snippets[Math.floor(Math.random() * snippets.length)],
-      alpha: 0.06 + Math.random() * 0.06
+      alpha: 0.12 + Math.random() * 0.10
     }));
   }
 
@@ -196,7 +196,7 @@ function initCodeBackground() {
     ctx.font = "500 12px ui-monospace, SFMono-Regular, Menlo, monospace";
 
     for (const d of drops) {
-      ctx.fillStyle = `rgba(37, 99, 235, ${d.alpha})`;
+      ctx.fillStyle = `rgba(56, 189, 248, ${d.alpha})`;
       ctx.fillText(d.text, d.x, d.y);
       d.y += d.speed;
       if (d.y > height + 20) {
