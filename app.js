@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
             body: JSON.stringify({
               access_key: SITE_CONFIG.web3formsKey,
               subject: `Yeni Panel Talebi: ${businessName}`,
-              from_name: "Pano Atölyesi Talep Formu",
+              from_name: "PanelAtölye Talep Formu",
               fullName,
               businessName,
               phone,
