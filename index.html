@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>html,body{background:#04070a}</style>
   <title>PanelAtölye | Küçük İşletmeler İçin Özel Yönetim Panelleri</title>
   <link rel="icon" type="image/svg+xml" href="logo.svg" />
+  <meta name="theme-color" content="#04070a" />
   <meta name="description" content="Küçük işletmeniz için Excel ve defter karmaşasına son veren, ihtiyacınıza özel basit, hızlı ve mobil uyumlu yönetim panelleri. Ücretsiz talep oluşturun." />
   <meta name="keywords" content="küçük işletme paneli, özel yönetim paneli, stok takip paneli, randevu takip sistemi, esnaf için yazılım, basit crm" />
   <meta name="robots" content="index, follow" />
@@ -82,15 +84,18 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="home.css?v=6" />
+  <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.__fx)document.documentElement.classList.remove('js')},2500)</script>
 </head>
 <body>
-  <!-- Üst Menü -->
-  <header class="navbar">
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="navbar" id="navbar">
     <div class="container nav-inner">
-      <a href="#" class="brand">
-        <img src="logo.svg" alt="PanelAtölye" class="brand-logo" />
+      <a href="#" class="brand" aria-label="PanelAtölye ana sayfa">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#10b981"/><path d="M13 31V9h9.2c4.4 0 7 2.5 7 6.3s-2.6 6.3-7 6.3H13" fill="none" stroke="#04110c" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/><rect x="21" y="26" width="7" height="2.6" rx="1.3" fill="#04110c" opacity=".55"/></svg>
+        <span class="brand-word">Panel<em>Atölye</em></span>
       </a>
 
       <nav class="nav-links" aria-label="Ana menü">
@@ -101,9 +106,7 @@
       </nav>
 
       <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menüyü aç/kapat" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </button>
     </div>
 
@@ -116,81 +119,91 @@
   </header>
 
   <main>
-    <!-- Hero Bölümü -->
+    <!-- Hero -->
     <section class="hero">
-      <canvas id="codeBgCanvas" class="code-bg-canvas" aria-hidden="true"></canvas>
-      <div class="container hero-grid">
+      <video class="hero-video" id="heroVideo" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+        <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20261022_235442_c62146c2-3f2f-46c0-ab51-649a4aa26cf5.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-scrim" aria-hidden="true"></div>
+
+      <div class="container hero-inner">
         <div class="hero-content">
-          <div class="badge">Küçük İşletmeler &amp; Esnaflar İçin</div>
-          <h1>Karmaşık yazılımlar değil, <span>tam işinize göre</span> basit paneller.</h1>
-          <p class="hero-subtitle">
+          <div class="badge rise" style="--d:.05s"><i></i>Küçük işletmeler &amp; esnaflar için</div>
+          <h1 class="rise" style="--d:.15s">Defter karmaşasına son.<br />İşiniz <em>tek ekranda.</em></h1>
+          <p class="hero-subtitle rise" style="--d:.3s">
             Excel tabloları, kağıt defterler ve WhatsApp mesajları arasında kaybolmayın.
             Sadece sizin kullandığınız özellikleri içeren, telefondan ve bilgisayardan açılan özel takip panelleri hazırlıyorum.
           </p>
-          <div class="hero-actions">
+          <div class="hero-actions rise" style="--d:.42s">
             <a href="#talep-formu" class="btn btn-primary btn-lg">Ücretsiz Panel Talebi Oluştur</a>
             <a href="#ornekler" class="btn btn-outline btn-lg">Örnekleri İncele</a>
           </div>
-          <div class="hero-trust">
-            <span>✓ Karmaşık kurulum yok</span>
-            <span>✓ Telefon &amp; PC uyumlu</span>
-            <span>✓ 48 saatte ilk demo</span>
+          <div class="hero-trust rise" style="--d:.52s">
+            <span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5"/></svg>Karmaşık kurulum yok</span>
+            <span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5"/></svg>Telefon &amp; PC uyumlu</span>
+            <span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5"/></svg>48 saatte ilk demo</span>
           </div>
         </div>
 
         <!-- Etkileşimli Mini Panel Önizlemesi -->
-        <div class="hero-mockup" aria-label="Örnek işletme paneli önizlemesi">
-          <div class="mockup-header">
-            <div class="mockup-dots">
-              <span></span><span></span><span></span>
-            </div>
-            <div class="mockup-title">Butik Kafe — Günlük Özet Paneli</div>
-            <span class="mockup-status">● Canlı</span>
+        <div class="mockup-stage rise" style="--d:.65s">
+          <div class="float-chip chip-a" aria-hidden="true">
+            <span class="chip-ic warn"><svg viewBox="0 0 24 24"><path d="M12 9v4M12 17h.01M10.3 3.9 2.4 18a2 2 0 0 0 1.7 3h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg></span>
+            <span><strong>Kritik stok</strong><small>Kahve çekirdeği azaldı</small></span>
           </div>
-          <div class="mockup-body">
-            <div class="stat-row">
-              <div class="stat-card">
-                <span class="stat-label">Bugünkü Ciro</span>
-                <strong class="stat-value">₺14.850</strong>
-                <span class="stat-trend up">+%18 düne göre</span>
-              </div>
-              <div class="stat-card">
-                <span class="stat-label">Açık Sipariş</span>
-                <strong class="stat-value">7</strong>
-                <span class="stat-trend">2 tanesi kuryede</span>
-              </div>
-              <div class="stat-card">
-                <span class="stat-label">Kritik Stok</span>
-                <strong class="stat-value warning">3 Ürün</strong>
-                <span class="stat-trend">Kahve çekirdeği azaldı</span>
-              </div>
-            </div>
+          <div class="float-chip chip-b" aria-hidden="true">
+            <span class="chip-ic ok"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+            <span><strong>Randevu onaylandı</strong><small>Yarın 11:30 · hatırlatma gitti</small></span>
+          </div>
 
-            <div class="mockup-list">
-              <div class="mockup-list-header">
-                <span>Son İşlemler</span>
-                <span class="pill">Bugün</span>
-              </div>
-              <div class="mockup-item">
-                <div>
-                  <strong>Toptancı Ödemesi — Süt &amp; Krema</strong>
-                  <small>14:20 • Nakit</small>
+          <div class="hero-mockup" id="mockup" aria-label="Örnek işletme paneli önizlemesi">
+            <div class="mockup-header">
+              <div class="mockup-dots"><span></span><span></span><span></span></div>
+              <div class="mockup-title">Butik Kafe — Günlük Özet Paneli</div>
+              <span class="mockup-status"><i></i>Canlı</span>
+            </div>
+            <div class="mockup-body">
+              <div class="stat-row">
+                <div class="stat-card">
+                  <span class="stat-label">Bugünkü Ciro</span>
+                  <strong class="stat-value" data-count="14850" data-prefix="₺">₺14.850</strong>
+                  <span class="stat-trend up">+%18 düne göre</span>
                 </div>
-                <span class="amount negative">-₺2.400</span>
-              </div>
-              <div class="mockup-item">
-                <div>
-                  <strong>Masa 4 &amp; 8 Toplam Tahsilat</strong>
-                  <small>15:05 • Kredi Kartı</small>
+                <div class="stat-card">
+                  <span class="stat-label">Açık Sipariş</span>
+                  <strong class="stat-value" data-count="7">7</strong>
+                  <span class="stat-trend">2 tanesi kuryede</span>
                 </div>
-                <span class="amount positive">+₺1.920</span>
-              </div>
-              <div class="mockup-item">
-                <div>
-                  <strong>Kurumsal Kahve Siparişi (12 Kutu)</strong>
-                  <small>16:10 • Havale Bekliyor</small>
+                <div class="stat-card">
+                  <span class="stat-label">Kritik Stok</span>
+                  <strong class="stat-value warning">3 Ürün</strong>
+                  <span class="stat-trend">Kahve çekirdeği azaldı</span>
                 </div>
-                <span class="amount pending">₺3.600</span>
+              </div>
+
+              <div class="mockup-split">
+                <div class="mockup-list">
+                  <div class="mockup-list-header"><span>Son İşlemler</span><span class="pill">Bugün</span></div>
+                  <div class="mockup-item">
+                    <div><strong>Toptancı Ödemesi — Süt &amp; Krema</strong><small>14:20 • Nakit</small></div>
+                    <span class="amount negative">-₺2.400</span>
+                  </div>
+                  <div class="mockup-item">
+                    <div><strong>Masa 4 &amp; 8 Toplam Tahsilat</strong><small>15:05 • Kredi Kartı</small></div>
+                    <span class="amount positive">+₺1.920</span>
+                  </div>
+                  <div class="mockup-item">
+                    <div><strong>Kurumsal Kahve Siparişi (12 Kutu)</strong><small>16:10 • Havale Bekliyor</small></div>
+                    <span class="amount pending">₺3.600</span>
+                  </div>
+                </div>
+                <div class="mockup-chart" aria-hidden="true">
+                  <div class="mockup-list-header"><span>Haftalık Ciro</span><span class="pill">Pzt–Paz</span></div>
+                  <div class="bars">
+                    <i style="--h:42%"></i><i style="--h:58%"></i><i style="--h:49%"></i><i style="--h:71%"></i><i style="--h:63%"></i><i style="--h:88%"></i><i class="hot" style="--h:100%"></i>
+                  </div>
+                  <div class="bars-x"><span>P</span><span>S</span><span>Ç</span><span>P</span><span>C</span><span>C</span><span>P</span></div>
+                </div>
               </div>
             </div>
           </div>
@@ -198,18 +211,79 @@
       </div>
     </section>
 
-    <!-- Örnek Paneller Bölümü -->
-    <section id="ornekler" class="section section-alt">
+    <!-- Güven şeridi -->
+    <section class="facts" aria-label="Kısaca">
+      <div class="container facts-grid">
+        <div class="fact reveal"><strong>3–5</strong><span>ekranlı, sade panel</span></div>
+        <div class="fact reveal"><strong>5 dk</strong><span>içinde öğrenilir</span></div>
+        <div class="fact reveal"><strong>2–5 gün</strong><span>ortalama teslim</span></div>
+        <div class="fact reveal"><strong>₺0</strong><span>onaylamazsanız ücret yok</span></div>
+      </div>
+    </section>
+
+    <!-- Manifesto: kaydırdıkça kelimeler aydınlanır -->
+    <section class="manifesto" id="manifesto" aria-label="Kısaca ne yapıyorum">
+      <div class="pin">
+        <p class="manifesto-text" id="manifestoText" data-text="Excel tabloları. Kağıt defterler. WhatsApp mesajları. İşiniz dağınık. Ben hepsini *tek bir ekranda* topluyorum. Sade. Hızlı. *Tam sizin ölçünüzde.*">Excel tabloları. Kağıt defterler. WhatsApp mesajları. İşiniz dağınık. Ben hepsini tek bir ekranda topluyorum. Sade. Hızlı. Tam sizin ölçünüzde.</p>
+      </div>
+    </section>
+
+    <!-- Telefon: sabit durur, ekranlar kaydırmayla değişir -->
+    <section class="showcase" id="showcase" aria-label="Telefondan kullanım">
+      <div class="pin">
+        <div class="container showcase-inner">
+          <div class="showcase-copy">
+            <span class="section-tag">Cebinizde</span>
+            <h2>İşiniz artık <em>cebinizde.</em></h2>
+            <ol class="show-steps">
+              <li class="active"><h3>Stok, gözünüzün önünde</h3><p>Biten ürün kırmızıya döner. Sipariş vermeyi unutmazsınız.</p></li>
+              <li><h3>Randevular tek listede</h3><p>Günün programı, müşteri notları, tek tıkla WhatsApp hatırlatma.</p></li>
+              <li><h3>Kasa, gün sonunu beklemez</h3><p>Ciro ve gider anlık güncellenir. Defter toplamak yok.</p></li>
+            </ol>
+            <div class="show-dots" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+          </div>
+
+          <div class="phone-wrap">
+            <div class="phone" id="phone" role="img" aria-label="Örnek panel ekranları: stok, randevu ve kasa">
+              <div class="phone-notch"></div>
+              <div class="screen active">
+                <div class="scr-head"><strong>Stok Takibi</strong><span class="pill">Örnek</span></div>
+                <div class="scr-row bad"><div><b>Kahve çekirdeği</b><small>3 kg kaldı</small></div><span class="tag-bad">Kritik</span><i style="--w:12%"></i></div>
+                <div class="scr-row"><div><b>Süt</b><small>24 litre</small></div><span class="tag-ok">Yeterli</span><i style="--w:70%"></i></div>
+                <div class="scr-row"><div><b>Karton bardak</b><small>400 adet</small></div><span class="tag-ok">Yeterli</span><i style="--w:55%"></i></div>
+                <div class="scr-row warn"><div><b>Şurup</b><small>5 şişe</small></div><span class="tag-warn">Azalıyor</span><i style="--w:28%"></i></div>
+              </div>
+              <div class="screen">
+                <div class="scr-head"><strong>Bugünün Randevuları</strong><span class="pill">Örnek</span></div>
+                <div class="scr-row"><div><b>10:00 · Elif K.</b><small>Saç boyama</small></div><span class="tag-ok">Onaylı</span></div>
+                <div class="scr-row"><div><b>11:30 · Mert A.</b><small>Kontrol</small></div><span class="tag-ok">Onaylı</span></div>
+                <div class="scr-row"><div><b>14:00 · Ayşe D.</b><small>Bakım</small></div><span class="tag-warn">Bekliyor</span></div>
+                <div class="scr-btn">WhatsApp ile hatırlat</div>
+              </div>
+              <div class="screen">
+                <div class="scr-head"><strong>Günlük Kasa</strong><span class="pill">Örnek</span></div>
+                <div class="scr-big"><small>Bugünkü ciro</small><b>₺14.850</b><span>+%18 düne göre</span></div>
+                <div class="scr-bars"><i style="--h:40%"></i><i style="--h:62%"></i><i style="--h:48%"></i><i style="--h:75%"></i><i style="--h:58%"></i><i style="--h:90%"></i><i class="hot" style="--h:100%"></i></div>
+                <div class="scr-row"><div><b>Toptancı ödemesi</b><small>14:20 · Nakit</small></div><span class="neg">-₺2.400</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Örnek Paneller -->
+    <section id="ornekler" class="section">
       <div class="container">
-        <div class="section-head">
-          <span class="section-tag">Neler Üretebiliriz?</span>
-          <h2>Sektörünüze Özel Örnek Paneller</h2>
+        <div class="section-head reveal">
+          <span class="section-tag">Neler üretebiliriz?</span>
+          <h2>Sektörünüze <em>özel</em> örnek paneller</h2>
           <p>Hazır paketlere uyum sağlamaya çalışmayın. Aşağıdaki örneklerden ilham alabilir veya tamamen kendi işinize özel bir ekran isteyebilirsiniz.</p>
         </div>
 
         <div class="cards-grid">
-          <article class="card">
-            <div class="card-icon">☕</div>
+          <article class="card reveal">
+            <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h12v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8z"/><path d="M16 10h2a2 2 0 0 1 0 4h-2M7 3v2M11 3v2"/></svg></div>
             <h3>Kafe, Restoran &amp; Market</h3>
             <p>Günlük kasa giriş-çıkışı, veresiye/tedarikçi takibi ve kritik stok uyarıları tek ekranda.</p>
             <ul class="card-features">
@@ -217,11 +291,12 @@
               <li>Tedarikçi borç/alacak listesi</li>
               <li>Azalan ürün uyarısı</li>
             </ul>
-            <button type="button" class="card-cta" data-preset="Kafe / Restoran Kasa ve Stok Paneli">Buna benzer bir panel iste →</button>
+            <div class="card-actions"><button type="button" class="card-demo" data-demo="cafe"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg> Canlı örneği aç</button>
+            <button type="button" class="card-cta" data-preset="Kafe / Restoran Kasa ve Stok Paneli">Buna benzer bir panel iste <span aria-hidden="true">→</span></button></div>
           </article>
 
-          <article class="card">
-            <div class="card-icon">✂️</div>
+          <article class="card reveal">
+            <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.1 15.9M14.5 14.5 20 20M8.1 8.1 12 12"/></svg></div>
             <h3>Kuaför, Klinik &amp; Servis</h3>
             <p>Müşteri randevuları, yapılan işlemler, sonraki kontrol tarihleri ve günlük doluluk takibi.</p>
             <ul class="card-features">
@@ -229,11 +304,12 @@
               <li>Müşteri işlem geçmişi notları</li>
               <li>Tek tıkla WhatsApp hatırlatma</li>
             </ul>
-            <button type="button" class="card-cta" data-preset="Randevu ve Müşteri Takip Paneli">Buna benzer bir panel iste →</button>
+            <div class="card-actions"><button type="button" class="card-demo" data-demo="salon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg> Canlı örneği aç</button>
+            <button type="button" class="card-cta" data-preset="Randevu ve Müşteri Takip Paneli">Buna benzer bir panel iste <span aria-hidden="true">→</span></button></div>
           </article>
 
-          <article class="card">
-            <div class="card-icon">📦</div>
+          <article class="card reveal">
+            <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 8l-9-5-9 5v8l9 5 9-5V8z"/><path d="M3.3 7.5 12 12.5l8.7-5M12 22V12.5"/></svg></div>
             <h3>E-Ticaret &amp; Üretim Atölyesi</h3>
             <p>Sipariş durumu, kargo takip numaraları, hammadde stoğu ve net kâr hesabı.</p>
             <ul class="card-features">
@@ -241,11 +317,12 @@
               <li>Maliyet ve kâr marjı özeti</li>
               <li>İade ve değişim kayıtları</li>
             </ul>
-            <button type="button" class="card-cta" data-preset="Sipariş ve Kargo Takip Paneli">Buna benzer bir panel iste →</button>
+            <div class="card-actions"><button type="button" class="card-demo" data-demo="shop"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg> Canlı örneği aç</button>
+            <button type="button" class="card-cta" data-preset="Sipariş ve Kargo Takip Paneli">Buna benzer bir panel iste <span aria-hidden="true">→</span></button></div>
           </article>
 
-          <article class="card">
-            <div class="card-icon">🤝</div>
+          <article class="card reveal">
+            <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></div>
             <h3>Emlak, Ajans &amp; Danışmanlık</h3>
             <p>Potansiyel müşteri (lead) takibi, verilen teklifler, sözleşme ve ödeme tarihleri.</p>
             <ul class="card-features">
@@ -253,35 +330,36 @@
               <li>Teklif durumu (Bekliyor / Onaylandı)</li>
               <li>Aylık gelir hedefi göstergesi</li>
             </ul>
-            <button type="button" class="card-cta" data-preset="Müşteri ve Teklif Takip Paneli">Buna benzer bir panel iste →</button>
+            <div class="card-actions"><button type="button" class="card-demo" data-demo="deals"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg> Canlı örneği aç</button>
+            <button type="button" class="card-cta" data-preset="Müşteri ve Teklif Takip Paneli">Buna benzer bir panel iste <span aria-hidden="true">→</span></button></div>
           </article>
         </div>
       </div>
     </section>
 
     <!-- Nasıl Çalışır -->
-    <section id="nasil-calisir" class="section">
+    <section id="nasil-calisir" class="section section-alt">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head reveal">
           <span class="section-tag">Süreç</span>
-          <h2>3 Adımda Kendi Panelinize Kavuşun</h2>
+          <h2>3 adımda kendi <em>panelinize</em> kavuşun</h2>
           <p>Teknik bilgiye ihtiyacınız yok. Sadece işinizi nasıl yaptığınızı anlatmanız yeterli.</p>
         </div>
 
         <div class="steps-grid">
-          <div class="step-card">
+          <div class="step-card reveal">
             <div class="step-num">01</div>
-            <h3>İhtiyacınızı Paylaşın</h3>
+            <h3>İhtiyacınızı paylaşın</h3>
             <p>Aşağıdaki kısa formu doldurun. Şu an neyi takip etmekte zorlandığınızı ve panelde neleri görmek istediğinizi yazın.</p>
           </div>
-          <div class="step-card">
+          <div class="step-card reveal">
             <div class="step-num">02</div>
-            <h3>Özel Demo Hazırlayalım</h3>
+            <h3>Özel demo hazırlayalım</h3>
             <p>Size özel tasarlanmış çalışan bir önizleme hazırlayıp linkini paylaşayım. Beğenmediğiniz yerleri birlikte düzenleyelim.</p>
           </div>
-          <div class="step-card">
+          <div class="step-card reveal">
             <div class="step-num">03</div>
-            <h3>Hemen Kullanmaya Başlayın</h3>
+            <h3>Hemen kullanmaya başlayın</h3>
             <p>Onayladığınızda paneliniz yayına alınır. İster telefondan, ister tabletten, ister bilgisayardan şifrenizle girip kullanırsınız.</p>
           </div>
         </div>
@@ -289,24 +367,23 @@
     </section>
 
     <!-- Talep Formu -->
-    <section id="talep-formu" class="section section-alt">
+    <section id="talep-formu" class="section">
       <div class="container form-layout">
-        <div class="form-info">
+        <div class="form-info reveal">
           <span class="section-tag">Başlayalım</span>
-          <h2>İşletmeniz İçin Panel Talep Edin</h2>
+          <h2>İşletmeniz için panel <em>talep edin</em></h2>
           <p>Formu doldurduğunuzda talebiniz doğrudan bana ulaşır. Aynı gün içinde sizinle iletişime geçip detayları netleştiririm.</p>
-
           <div class="info-box">
-            <h4>Neleri Belirtmeniz Faydalı Olur?</h4>
+            <h4>Neleri belirtmeniz faydalı olur?</h4>
             <ul>
-              <li>• İşletmeniz ne iş yapıyor?</li>
-              <li>• Şu an takibi nasıl yapıyorsunuz? (Excel, defter, hafıza...)</li>
-              <li>• Panelde mutlaka olması gereken 2-3 bilgi nedir?</li>
+              <li>İşletmeniz ne iş yapıyor?</li>
+              <li>Şu an takibi nasıl yapıyorsunuz? (Excel, defter, hafıza...)</li>
+              <li>Panelde mutlaka olması gereken 2-3 bilgi nedir?</li>
             </ul>
           </div>
         </div>
 
-        <div class="form-card">
+        <div class="form-card reveal">
           <form id="panelRequestForm">
             <div class="form-row">
               <div class="form-group">
@@ -318,7 +395,6 @@
                 <input type="text" id="businessName" name="businessName" placeholder="Örn: Yılmaz Oto Servis" required />
               </div>
             </div>
-
             <div class="form-row">
               <div class="form-group">
                 <label for="phone">Telefon / WhatsApp *</label>
@@ -329,7 +405,6 @@
                 <input type="email" id="email" name="email" placeholder="ornek@isletme.com" />
               </div>
             </div>
-
             <div class="form-group">
               <label>Hangi Konularda Panel İstiyorsunuz? (Birden fazla seçebilirsiniz)</label>
               <div class="checkbox-grid">
@@ -341,7 +416,6 @@
                 <label class="chip-checkbox"><input type="checkbox" name="features" value="Özel Hesaplama" /><span>Özel Hesaplama</span></label>
               </div>
             </div>
-
             <div class="form-group">
               <label for="currentTool">Şu an bu işleri nasıl takip ediyorsunuz?</label>
               <select id="currentTool" name="currentTool">
@@ -352,27 +426,20 @@
                 <option value="Henüz düzenli bir sistemim yok">Henüz düzenli bir sistemim yok</option>
               </select>
             </div>
-
             <div class="form-group">
               <label for="details">İhtiyacınızı Kısaca Anlatın *</label>
               <textarea id="details" name="details" rows="4" placeholder="Örn: Müşterilerimin araç bakım tarihlerini ve değişen parçaları kolayca kaydetmek, bakım zamanı gelince hatırlatma görmek istiyorum." required></textarea>
             </div>
-
-            <button type="submit" class="btn btn-primary btn-lg btn-block" id="submitBtn">
-              Talebi Gönder
-            </button>
+            <button type="submit" class="btn btn-primary btn-lg btn-block" id="submitBtn">Talebi Gönder</button>
             <p class="form-note">Bilgileriniz yalnızca sizinle iletişim kurmak için kullanılır.</p>
           </form>
 
-          <!-- Form Gönderildi Ekranı -->
           <div id="formSuccess" class="form-success" hidden>
             <div class="success-icon">✓</div>
             <h3>Talebiniz Hazır!</h3>
             <p id="successMessage">Talebiniz kaydedildi. En kısa sürede dönüş yapılacaktır.</p>
             <div class="success-actions">
-              <button type="button" id="copySummaryBtn" class="btn btn-outline">
-                Özeti Kopyala
-              </button>
+              <button type="button" id="copySummaryBtn" class="btn btn-outline">Özeti Kopyala</button>
             </div>
             <button type="button" id="resetFormBtn" class="btn-link">Yeni bir talep oluştur</button>
           </div>
@@ -380,8 +447,8 @@
       </div>
     </section>
 
-    <!-- Sıkça Sorulan Sorular -->
-    <section id="sss" class="section">
+    <!-- SSS -->
+<section id="sss" class="section">
       <div class="container faq-container">
         <div class="section-head">
           <span class="section-tag">Merak Edilenler</span>
@@ -408,7 +475,7 @@
         </div>
       </div>
     </section>
-  </main>
+    </main>
 
   <footer class="footer">
     <div class="container footer-inner">
@@ -428,6 +495,24 @@
     </div>
   </footer>
 
+  <dialog class="demo" id="demoDialog" aria-labelledby="demoTitle">
+    <div class="demo-bar">
+      <div class="mockup-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+      <strong id="demoTitle">Örnek panel</strong>
+      <span class="demo-live"><i></i>Canlı demo</span>
+      <button type="button" class="demo-x" id="demoClose" aria-label="Kapat">×</button>
+    </div>
+    <div class="demo-tabs" id="demoTabs" role="tablist" aria-label="Örnek paneller"></div>
+    <div class="demo-body" id="demoBody"></div>
+    <div class="demo-foot">
+      <span>Bu bir örnektir, girdiğiniz bilgiler kaydedilmez. Kendi işinize göre hazırlarım.</span>
+      <button type="button" class="btn btn-primary btn-sm" id="demoAsk">Buna benzer bir panel iste</button>
+    </div>
+    <div class="demo-toast" id="demoToast" role="status" aria-live="polite"></div>
+  </dialog>
+
   <script src="app.js"></script>
+  <script src="fx.js?v=3"></script>
+  <script src="demos.js?v=1"></script>
 </body>
 </html>
